@@ -1,0 +1,15 @@
+com/example/controller/UserResource.class
+com/example/model/TestCase.class
+com/example/service/TestCasesVersionService.class
+com/example/dao/TestProtocolDao.class
+com/example/model/Project.class
+com/example/model/File.class
+com/example/service/impl/TestCasesVersionServiceImpl.class
+com/example/model/TestCaseVersion.class
+com/example/service/impl/TestProtocolServiceImpl.class
+com/example/service/UserService.class
+com/example/service/TestProtocolService.class
+com/example/model/User.class
+com/example/service/FileService.class
+com/example/model/TestProtocol.class
+com/example/dao/TestCaseVersionDao.class

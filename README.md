@@ -1,7 +1,7 @@
 # ManualTestCases
 This Webapplication is based on Spring Boot and Angular2 and manages manual testcases for IT-projects
 
-#Technologies
+##Technologies
 node.js
 typescript
 java

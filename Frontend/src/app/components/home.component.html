@@ -1,0 +1,25 @@
+<nav-bar></nav-bar>
+<div class="container">
+<div class="ui two column grid">
+  <div class="column">
+    <!--Home ist die Parent-Komponente, app-customerlist und register fungieren als Child-Komponenten
+    und sitzen in home-->
+    <div class="ui segment">
+      <app-customerlist></app-customerlist>
+    </div>
+  </div>  
+
+  <div class="column">
+    <div class="ui segment">
+      <div class="container">
+        <app-create-customer></app-create-customer>
+      </div>
+    </div>
+
+    <div class="ui segment">
+    <register></register>
+    </div>
+  </div>
+</div>
+</div>
+

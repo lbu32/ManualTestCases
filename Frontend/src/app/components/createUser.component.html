@@ -1,0 +1,24 @@
+<form *ngIf="!created" class="ui form" (ngSubmit)="onSubmit()" #registerFormUser = "ngForm">
+  <div class="field">
+    <label>Neuen Nutzer hinzufügen</label>
+    <div class="four fields">
+      <div class="field">
+        <input type="text" name="firstName" placeholder="Vorname" [(ngModel)]="newUser.firstName" ngControl="firstName" required>
+      </div>
+      <div class="field">
+        <input type="text" name="lastName" placeholder="Nachname" [(ngModel)]="newUser.lastName" ngControl="lastName" required>
+      </div>
+      <div class="field">
+        <input type="text" name="email" placeholder="E-Mail Adresse" [(ngModel)]="newUser.email" ngControl="email" required>
+      </div>
+      <p-dropdown>
+      <input type="Dropdown" name="project" placeholder="Wähle aus..." [(ngModel)]="newUser.project" ngControl="Projekt" required >
+      </p-dropdown>
+    </div>
+  </div>
+  <button type="submit" class="ui button" [disabled]="!registerFormUser.form.valid" >Speichern</button>
+</form>
+
+<div *ngIf="registered">
+  <h1>Der Benutzer wurde erfolgreich angelegt.</h1>
+</div>

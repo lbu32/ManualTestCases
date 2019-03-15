@@ -1,0 +1,13 @@
+<form *ngIf="!created" class="ui form" (ngSubmit)="onSubmit()" #registerFormCustomer = "ngForm">
+  <div class="field">
+    <label>Neuen Kunden hinzufügen</label>
+    <div class="field">
+
+      <input type="text" name="company" placeholder="Kundenname" [(ngModel)]="" ngControl="" required>
+    </div>
+  </div>
+  <button type="submit" class="ui button" [disabled]="!registerFormCustomer.form.valid" >Speichern</button>
+</form>
+
+<div *ngIf="registered" Der Kunde wurde erfolgreich angelegt>
+  </div>

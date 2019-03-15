@@ -1,0 +1,83 @@
+<div class="ui inverted menu">
+  <div class="ui secondary pointing menu ">
+    <a class="item" routerLink="/home" routerLinkActive="active">
+      <img src="resources/static/pic/project.png" />
+    </a>
+    <a class="item" routerLink="/home" routerLinkActive="active">
+      <h2>Projektron</h2>
+    </a>
+  </div>
+  <div class="right menu">
+  <a class="active item">
+    Neuen Testfall anlegen
+  </a>
+  <a class="item">
+    Benutzername
+  </a>
+  <a class="item">
+    Abmelden
+  </a>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1>Übersicht der Testfälle</h1>
+
+  <div class="ui search">
+    <div class="ui icon input">
+      <input class="prompt" placeholder="Suche" type="text">
+      <i class="search icon"></i>
+    </div>
+    <div class="results"></div>
+  </div>
+
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Testfälle</th>
+        <th>Menü</th>
+        <th>Status Testfall</th>
+        <th>Ergebnis letzter<br>Testdurchlauf</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let test of tests">
+       <td>{{test.id}}</td>
+        <td>
+          <div class="ui accordion">
+             <div class="title active">
+                <i class="dropdown icon"></i> {{test.name}}
+              </div>
+              <div class="content field">hallo
+                <app-testcaseprotocols></app-testcaseprotocols>
+            </div>
+          </div>
+        </td>
+        <td>
+          <button class="ui basic button">
+                 Details
+          </button>
+          <button class="ui basic button">
+                 Neues Protokoll
+          </button>
+          <button class="ui basic button">
+                 Neue Version
+          </button>
+        </td>
+        <td>
+          <i *ngIf="test.status" class="ui green label">aktiv</i>
+          <i *ngIf="!test.status" class="ui white label">inaktiv</i>
+        </td>
+        <td>
+          <i *ngIf="test.result=='true'" class="ui green label">erfolgreich</i>
+          <i *ngIf="test.result=='false'" class="ui red label">nicht erfolgreich</i>
+           <i *ngIf="test.result=='untested'" class="ui white label">ungetestet</i>
+          </td>
+      </tr>
+      
+    </tbody>
+
+  </table>
+</div>
